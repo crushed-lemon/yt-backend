@@ -15,7 +15,7 @@ jobs:
 
       - name: Build and tag the docker image
         run: |
-          docker build -t yt-backend:$NOW
+          docker build -t yt-backend:$NOW .
           docker tag yt-backend:$NOW ytbackend.azurecr.io/yt-backend:$NOW
 
       - name: Log into Azure
